@@ -1,49 +1,86 @@
 import 'package:flutter/material.dart';
 import 'package:wave/config.dart';
 import 'package:wave/wave.dart';
+import 'package:widget_testing/consts/custom_colors.dart';
+import 'package:widget_testing/widgets/custom_appbar.dart';
 
-class WaveBackground extends StatelessWidget {
-  static const routeName = '/WaveBackground';
+class WaveBackgroundScreen extends StatelessWidget {
+  static const routeName = '/WaveBackgroundScreen';
 
-  const WaveBackground({Key? key}) : super(key: key);
+  const WaveBackgroundScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: Stack(
-          children: [
-            Container(
-              height: MediaQuery.of(context).size.height * 0.95,
-              child: RotatedBox(
-                quarterTurns: 2,
-                child: WaveWidget(
-                  config: CustomConfig(
-                    gradients: [
-                      [
-                        Colors.grey,
-                        Colors.blue,
+    return SafeArea(
+      child: Scaffold(
+        body: SingleChildScrollView(
+          child: Stack(
+            children: [
+              Container(
+                height: MediaQuery.of(context).size.height * 0.95,
+                child: RotatedBox(
+                  quarterTurns: 2,
+                  child: WaveWidget(
+                    config: CustomConfig(
+                      gradients: [
+                        [
+                          Colors.lime,
+                          Colors.amber,
+                          Colors.purple,
+                        ],
+                        [
+                          CustomColors.secondaryColor,
+                          CustomColors.primaryColor,
+                        ]
                       ],
-                      [
-                        Colors.grey,
-                        Colors.green,
-                      ]
-                    ],
-                    durations: [19440, 10800],
-                    heightPercentages: [0.20, 0.20],
-                    blur: MaskFilter.blur(BlurStyle.solid, 10),
-                    gradientBegin: Alignment.bottomLeft,
-                    gradientEnd: Alignment.topRight,
-                  ),
-                  waveAmplitude: 0,
-                  size: Size(
-                    double.infinity,
-                    double.infinity,
+                      durations: [25000, 10800],
+                      heightPercentages: [0.19, 0.20],
+                      blur: MaskFilter.blur(BlurStyle.solid, 20),
+                      gradientBegin: Alignment.bottomLeft,
+                      gradientEnd: Alignment.topRight,
+                    ),
+                    waveAmplitude: 0,
+                    size: Size(
+                      double.infinity,
+                      double.infinity,
+                    ),
                   ),
                 ),
               ),
-            ),
-          ],
+              Container(
+                margin: EdgeInsets.all(2),
+                width: double.infinity,
+                height: 55,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  color: CustomColors.primaryColor,
+                ),
+                child: Row(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(left: 10),
+                      child: IconButton(
+                        onPressed: () => Navigator.pop(context),
+                        iconSize: 25,
+                        icon: Icon(Icons.arrow_back),
+                        color: CustomColors.secondaryColor,
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(left: 20),
+                      child: Text(
+                        'Widget Kütüphanesi',
+                        style: TextStyle(
+                            fontFamily: 'HandWrite',
+                            fontSize: 30,
+                            color: CustomColors.secondaryColor),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

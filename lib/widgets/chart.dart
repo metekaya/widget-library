@@ -5,14 +5,14 @@ import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:widget_testing/consts/custom_colors.dart';
 import 'package:widget_testing/widgets/custom_appbar.dart';
 
-class ChartPage extends StatefulWidget {
-  static const routeName = '/ChartPage';
+class ChartScreen extends StatefulWidget {
+  static const routeName = '/ChartScreen';
 
   @override
-  _ChartPageState createState() => _ChartPageState();
+  _ChartScreenState createState() => _ChartScreenState();
 }
 
-class _ChartPageState extends State<ChartPage> {
+class _ChartScreenState extends State<ChartScreen> {
   List<_PieData>? pieData;
   TooltipBehavior? _tooltipBehavior;
   var name;

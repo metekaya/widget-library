@@ -12,13 +12,17 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 2),
+      margin: EdgeInsets.all(2),
       child: AppBar(
+        iconTheme: IconThemeData(color: CustomColors.secondaryColor),
         backgroundColor: CustomColors.primaryColor,
         centerTitle: true,
         title: Text(
           'Widget Kütüphanesi',
-          style: TextStyle(fontFamily: 'HandWrite', fontSize: 30),
+          style: TextStyle(
+              fontFamily: 'HandWrite',
+              fontSize: 30,
+              color: CustomColors.secondaryColor),
         ),
         elevation: 5,
         shape: RoundedRectangleBorder(

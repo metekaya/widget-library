@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widget_testing/consts/custom_colors.dart';
+import 'package:widget_testing/widgets/animated_fade.dart';
 import 'package:widget_testing/widgets/chart.dart';
 import 'package:widget_testing/widgets/wave_background.dart';
 
@@ -31,13 +32,19 @@ class HomePage extends StatelessWidget {
                 HomePageButton(
                   'Chart Widget',
                   () {
-                    navigateTo(context, ChartPage.routeName);
+                    navigateTo(context, ChartScreen.routeName);
                   },
                 ),
                 HomePageButton(
                   'Wave Background',
                   () {
-                    navigateTo(context, WaveBackground.routeName);
+                    navigateTo(context, WaveBackgroundScreen.routeName);
+                  },
+                ),
+                HomePageButton(
+                  'Animated Cross Fade',
+                  () {
+                    navigateTo(context, AnimatedFadeScreen.routeName);
                   },
                 ),
               ],
