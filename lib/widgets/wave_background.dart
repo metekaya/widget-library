@@ -3,6 +3,8 @@ import 'package:wave/config.dart';
 import 'package:wave/wave.dart';
 
 class WaveBackground extends StatelessWidget {
+  static const routeName = '/WaveBackground';
+
   const WaveBackground({Key? key}) : super(key: key);
 
   @override

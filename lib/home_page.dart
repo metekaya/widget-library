@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:widget_testing/consts/custom_colors.dart';
 import 'package:widget_testing/widgets/chart.dart';
+import 'package:widget_testing/widgets/wave_background.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -31,6 +32,12 @@ class HomePage extends StatelessWidget {
                   'Chart Widget',
                   () {
                     navigateTo(context, ChartPage.routeName);
+                  },
+                ),
+                HomePageButton(
+                  'Wave Background',
+                  () {
+                    navigateTo(context, WaveBackground.routeName);
                   },
                 ),
               ],
