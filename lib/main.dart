@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:widget_testing/widgets/animated_fade.dart';
 import 'package:widget_testing/widgets/chart.dart';
 import 'package:widget_testing/home_page.dart';
+import 'package:widget_testing/widgets/url_launchers.dart';
 import 'package:widget_testing/widgets/wave_background.dart';
 
 void main() {
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
           ChartScreen.routeName: (ctx) => ChartScreen(),
           WaveBackgroundScreen.routeName: (ctx) => WaveBackgroundScreen(),
           AnimatedFadeScreen.routeName: (ctx) => AnimatedFadeScreen(),
+          UrlLaunchersScreen.routeName: (ctx) => UrlLaunchersScreen(),
         });
   }
 }

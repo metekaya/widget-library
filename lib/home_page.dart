@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:widget_testing/consts/custom_colors.dart';
 import 'package:widget_testing/widgets/animated_fade.dart';
 import 'package:widget_testing/widgets/chart.dart';
+import 'package:widget_testing/widgets/url_launchers.dart';
 import 'package:widget_testing/widgets/wave_background.dart';
 
 class HomePage extends StatelessWidget {
@@ -45,6 +46,12 @@ class HomePage extends StatelessWidget {
                   'Animated Cross Fade',
                   () {
                     navigateTo(context, AnimatedFadeScreen.routeName);
+                  },
+                ),
+                HomePageButton(
+                  'URL Launchers',
+                  () {
+                    navigateTo(context, UrlLaunchersScreen.routeName);
                   },
                 ),
               ],
