@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:wave/config.dart';
 import 'package:wave/wave.dart';
 import 'package:widget_testing/consts/custom_colors.dart';
-import 'package:widget_testing/widgets/custom_appbar.dart';
 
 class WaveBackgroundScreen extends StatelessWidget {
   static const routeName = '/WaveBackgroundScreen';
