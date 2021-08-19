@@ -113,6 +113,7 @@ class _ChartScreenState extends State<ChartScreen> {
             size: 25,
           ),
           hintText: hintText,
+          labelText: 'Veri',
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(18),
           ),
